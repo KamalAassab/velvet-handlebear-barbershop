@@ -223,10 +223,13 @@ Looking forward to your confirmation!`;
             >
               SERVICES
             </a>
-            <img
+            <Image
               src="/favicon.svg"
               alt="Velvet Handlebear Logo"
+              width={167}
+              height={137}
               className={`h-[60px] w-[60px] sm:h-[80px] sm:w-[80px] md:h-[100px] md:w-[100px] lg:h-[123px] lg:w-[123px] xl:h-[137px] xl:w-[167px] m-0 p-0 block -mx-2 sm:-mx-3 lg:-mx-4 transition-all duration-300 ${scrolled ? 'scale-50' : 'scale-100'}`}
+              priority
             />
             <a
               href="#team"
@@ -254,10 +257,13 @@ Looking forward to your confirmation!`;
 
           {/* Mobile Navigation */}
           <div className="md:hidden flex items-center justify-center relative">
-            <img
+            <Image
               src="/favicon.svg"
               alt="Velvet Handlebear Logo"
+              width={80}
+              height={80}
               className={`h-[70px] w-[70px] sm:h-[80px] sm:w-[80px] transition-all duration-300 ${scrolled ? 'h-[60px] w-[60px] sm:h-[70px] sm:w-[70px]' : 'h-[70px] w-[70px] sm:h-[80px] sm:w-[80px]'}`}
+              priority
             />
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -401,100 +407,136 @@ Looking forward to your confirmation!`;
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-3 md:gap-4 max-w-6xl mx-auto">
             {/* Column 1 */}
             <div className="space-y-2 sm:space-y-3 md:space-y-4">
-              <div className="relative overflow-hidden group">
-                <img
+              <div className="relative overflow-hidden group h-32 sm:h-40 md:h-48 lg:h-64">
+                <Image
                   src="/gallery1.webp"
                   alt="Barber giving haircut"
-                  className="w-full h-32 sm:h-40 md:h-48 lg:h-64 object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  loading="lazy"
+                  sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
                 />
               </div>
-              <div className="relative overflow-hidden group">
-                <img
+              <div className="relative overflow-hidden group h-40 sm:h-52 md:h-64 lg:h-80">
+                <Image
                   src="/gallery2.webp"
                   alt="Barber cutting hair"
-                  className="w-full h-40 sm:h-52 md:h-64 lg:h-80 object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  loading="lazy"
+                  sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
                 />
               </div>
-              <div className="relative overflow-hidden group">
-                <img
+              <div className="relative overflow-hidden group h-32 sm:h-40 md:h-48 lg:h-64">
+                <Image
                   src="/gallery3.webp"
                   alt="Haircut in progress"
-                  className="w-full h-32 sm:h-40 md:h-48 lg:h-64 object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  loading="lazy"
+                  sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
                 />
               </div>
             </div>
 
             {/* Column 2 */}
             <div className="space-y-2 sm:space-y-3 md:space-y-4 md:mt-8 lg:mt-12">
-              <div className="relative overflow-hidden group">
-                <img
+              <div className="relative overflow-hidden group h-40 sm:h-52 md:h-64 lg:h-80">
+                <Image
                   src="/gallery4.webp"
                   alt="Team photo"
-                  className="w-full h-40 sm:h-52 md:h-64 lg:h-80 object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  loading="lazy"
+                  sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
                 />
               </div>
-              <div className="relative overflow-hidden group">
-                <img
+              <div className="relative overflow-hidden group h-32 sm:h-40 md:h-48 lg:h-64">
+                <Image
                   src="/gallery5.webp"
                   alt="Barber detail"
-                  className="w-full h-32 sm:h-40 md:h-48 lg:h-64 object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  loading="lazy"
+                  sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
                 />
               </div>
-              <div className="relative overflow-hidden group">
-                <img
+              <div className="relative overflow-hidden group h-40 sm:h-52 md:h-64 lg:h-80">
+                <Image
                   src="/gallery6.webp"
                   alt="Barber with client"
-                  className="w-full h-40 sm:h-52 md:h-64 lg:h-80 object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  loading="lazy"
+                  sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
                 />
               </div>
             </div>
 
             {/* Column 3 */}
             <div className="space-y-2 sm:space-y-3 md:space-y-4 hidden sm:block">
-              <div className="relative overflow-hidden group">
-                <img
+              <div className="relative overflow-hidden group h-52 sm:h-64 md:h-80 lg:h-96">
+                <Image
                   src="/gallery7.webp"
                   alt="Barber working"
-                  className="w-full h-52 sm:h-64 md:h-80 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 33vw, 25vw"
                 />
               </div>
-              <div className="relative overflow-hidden group">
-                <img
+              <div className="relative overflow-hidden group h-32 sm:h-40 md:h-48 lg:h-64">
+                <Image
                   src="/gallery8.webp"
                   alt="Barber portrait"
-                  className="w-full h-32 sm:h-40 md:h-48 lg:h-64 object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 33vw, 25vw"
                 />
               </div>
-              <div className="relative overflow-hidden group">
-                <img
+              <div className="relative overflow-hidden group h-40 sm:h-52 md:h-64 lg:h-80">
+                <Image
                   src="/gallery9.webp"
                   alt="Barber tools"
-                  className="w-full h-40 sm:h-52 md:h-64 lg:h-80 object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 33vw, 25vw"
                 />
               </div>
             </div>
 
             {/* Column 4 */}
             <div className="space-y-2 sm:space-y-3 md:space-y-4 md:mt-8 lg:mt-12 hidden md:block">
-              <div className="relative overflow-hidden group">
-                <img
+              <div className="relative overflow-hidden group h-40 sm:h-52 md:h-64 lg:h-80">
+                <Image
                   src="/gallery10.webp"
                   alt="Barber detail work"
-                  className="w-full h-40 sm:h-52 md:h-64 lg:h-80 object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  loading="lazy"
+                  sizes="25vw"
                 />
               </div>
-              <div className="relative overflow-hidden group">
-                <img
+              <div className="relative overflow-hidden group h-32 sm:h-40 md:h-48 lg:h-64">
+                <Image
                   src="/gallery1.webp"
                   alt="Barber shaving"
-                  className="w-full h-32 sm:h-40 md:h-48 lg:h-64 object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  loading="lazy"
+                  sizes="25vw"
                 />
               </div>
-              <div className="relative overflow-hidden group">
-                <img
+              <div className="relative overflow-hidden group h-40 sm:h-52 md:h-64 lg:h-80">
+                <Image
                   src="/gallery2.webp"
                   alt="Barbershop interior"
-                  className="w-full h-40 sm:h-52 md:h-64 lg:h-80 object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  loading="lazy"
+                  sizes="25vw"
                 />
               </div>
             </div>
