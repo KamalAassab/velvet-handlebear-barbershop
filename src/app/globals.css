@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 26 26 26;
+    --foreground: 255 255 255;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-[#1a1a1a] text-foreground;
+    font-family: 'Amarante', cursive;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Amarante', cursive;
+  }
+}
+
+.script-font {
+  font-family: 'Amarante', cursive;
+  font-weight: 400;
+}
+
+.serif-font {
+  font-family: 'Amarante', cursive;
+  font-weight: 400;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8B9D83;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B5A89A;
+}
+
+/* Smooth transitions */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Selection color */
+::selection {
+  background-color: #8B9D83;
+  color: #1a1a1a;
+}
+
+::-moz-selection {
+  background-color: #8B9D83;
+  color: #1a1a1a;
+}
+
+/* Logo rolling animation */
+@keyframes roll {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-roll {
+  animation: roll 20s linear infinite;
+}
+
+@keyframes roll-reverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.animate-roll-reverse {
+  animation: roll-reverse 20s linear infinite;
+}
+
+/* Google Maps controls hiding */
+.map-container {
+  position: relative;
+}
+
+.map-container iframe {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.map-container:hover {
+  opacity: 0.95;
+}
+
+/* Hide any elements that might appear outside the iframe */
+.map-container > *:not(iframe):not(.absolute) {
+  display: none !important;
+}
